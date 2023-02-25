@@ -203,7 +203,7 @@ button:hover {
   transform: translate(-50%, -50%);
 }
 
-#blob {
+#bloa {
   position: absolute;
   z-index: -2;
   background-color: #ffffff;
@@ -238,7 +238,14 @@ button:hover {
   width: 600px;
 }
 
+.tx-sx {
+  font-size: 1rem;
+}
+
 @media (max-width: 600px) {
+  #blob {
+    display: hidden;
+  }
   body {
     padding: 39px;
   }
@@ -266,8 +273,4 @@ button:hover {
   .main {
     width: auto;
   }
-}
-
-.tx-sx {
-  font-size: 1rem;
 }
