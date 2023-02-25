@@ -6,7 +6,7 @@ import axios from "axios";
 function App() {
   const [bore, setBore] = useState("");
   const [isloading, setLoading] = useState(false);
-  const api = "http://www.boredapi.com/api/activity/";
+  const api = "https://www.boredapi.com/api/activity/";
 
   const fetchAct = () => {
     setLoading(true);
