@@ -259,6 +259,7 @@ button:hover {
 @media (max-width: 600px) {
   body {
     padding: 39px;
+    overflow: hidden;
   }
   h1 {
     min-width: 20px;
@@ -283,5 +284,39 @@ button:hover {
   }
   .main {
     min-width: 200px;
+  }
+  #blob2 {
+    position: absolute;
+    z-index: -2;
+    background-color: #ffffff;
+    height: 700px;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: linear-gradient(
+      90deg,
+      rgba(252, 176, 69, 1) 0%,
+      rgba(131, 58, 180, 1) 100%
+    );
+    filter: blur(200px);
+  }
+  .box {
+    position: absolute;
+    z-index: -2;
+    animation: rotate2 10s infinite;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes rotate2 {
+    from {
+      transform: rotate(0deg);
+    }
+    50% {
+      scale: 1 1;
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }

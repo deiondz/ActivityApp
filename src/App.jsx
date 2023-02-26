@@ -49,6 +49,7 @@ function App() {
   return (
     <div className="container">
       <div className="box" id="box">
+        <div id="blob2"></div>
         <div id="blob"></div>
       </div>
       {isloading ? <Loading /> : renderUser}
