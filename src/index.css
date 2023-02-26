@@ -125,8 +125,8 @@ body {
 }
 
 .dash {
-  width: 160px;
-  height: 4px;
+  max-width: 160px;
+  min-height: 4px;
   background: var(--clr-secondary);
 }
 
@@ -142,8 +142,8 @@ button {
   display: grid;
   place-items: center;
   font-size: 1.25rem;
-  width: 200px;
-  height: 55px;
+  min-width: 200px;
+  min-height: 55px;
   background-color: var(--clr-secondary);
   border-radius: 8px;
   transition: 1s;
@@ -203,54 +203,65 @@ button:hover {
   transform: translate(-50%, -50%);
 }
 
-#bloa {
-  position: absolute;
-  z-index: -2;
-  background-color: #ffffff;
-  height: 500px;
-  aspect-ratio: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-
-  background: linear-gradient(
-    90deg,
-    rgba(252, 176, 69, 1) 0%,
-    rgba(131, 58, 180, 1) 100%
-  );
-  animation: rotate2 10s infinite;
-  filter: blur(200px);
-  opacity: 50%;
-}
-
-@keyframes rotate2 {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.main {
-  width: 600px;
-}
-
 .tx-sx {
   font-size: 1rem;
 }
 
-@media (max-width: 600px) {
-  #blob {
-    display: hidden;
+@media (min-width: 40rem) {
+  .main {
+    padding: 20px;
+    min-width: 600px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
+  .box {
+    animation: rotate2 10s infinite;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  #blob {
+    position: absolute;
+    z-index: -2;
+    background-color: #ffffff;
+    height: 700px;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+
+    background: linear-gradient(
+      90deg,
+      rgba(252, 176, 69, 1) 0%,
+      rgba(131, 58, 180, 1) 100%
+    );
+    filter: blur(200px);
+  }
+  @keyframes rotate2 {
+    from {
+      transform: rotate(0deg);
+    }
+    50% {
+      scale: 1 1;
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+@media (max-width: 600px) {
   body {
     padding: 39px;
   }
   h1 {
-    width: 20px;
+    min-width: 20px;
     line-height: 4rem;
   }
   .md-text {
@@ -258,19 +269,19 @@ button:hover {
   }
   .dash {
     margin-top: 20px;
-    width: 272px;
-    height: 9px;
+    min-width: 15rem;
+    min-height: 9px;
     background: var(--clr-secondary);
   }
   button {
     margin-top: 4rem;
-    height: 64px;
-    width: 312px;
+    min-height: 64px;
+    min-width: 312px;
   }
   .header {
     margin-bottom: 3.9rem;
   }
   .main {
-    width: auto;
+    min-width: 200px;
   }
 }

@@ -30,10 +30,12 @@ function App() {
       fetchCall={fetchAct}
     />
   );
-  const blob = document.getElementById("blob");
 
-  document.body.onpointermove = (event) => {
+  const blob = document.getElementById("box");
+
+  window.onpointermove = (event) => {
     const { clientX, clientY } = event;
+
     blob.animate(
       {
         left: `${clientX}px`,
@@ -45,8 +47,9 @@ function App() {
 
   return (
     <div className="container">
-      <div id="blob"></div>
-      <div id="blur"></div>
+      <div className="box" id="box">
+        <div id="blob"></div>
+      </div>
       {isloading ? <Loading /> : renderUser}
     </div>
   );

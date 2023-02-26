@@ -24,7 +24,7 @@ function Activity({
             <li>Type: {type}</li>
             <li>Participants: {participants}</li>
             <li>Price: {price * 100}</li>
-            <li>Accessibility: {accessibility * 100}</li>
+            <li>Difficulty: {accessibility * 100}</li>
           </ul>
         </div>
         <div className="btn">
