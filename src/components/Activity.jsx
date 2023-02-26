@@ -8,6 +8,20 @@ function Activity({
   accessibility,
   fetchCall,
 }) {
+  let x = "";
+  if (price > 0) {
+    x = "Paid";
+  } else {
+    x = "Free";
+  }
+
+  let Difficulty = "";
+  if (accessibility > 0) {
+    Difficulty = "High";
+  } else {
+    Difficulty = "Low";
+  }
+
   return (
     <div>
       <div className="main">
@@ -23,8 +37,8 @@ function Activity({
             <li>Activity: {activity}</li>
             <li>Type: {type}</li>
             <li>Participants: {participants}</li>
-            <li>Price: {price * 100}</li>
-            <li>Difficulty: {accessibility * 100}</li>
+            <li>Price: {x}</li>
+            <li>Difficulty: {Difficulty}</li>
           </ul>
         </div>
         <div className="btn">

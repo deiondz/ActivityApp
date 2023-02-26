@@ -20,6 +20,7 @@ function App() {
   useEffect(() => {
     fetchAct();
   }, []);
+
   const renderUser = (
     <Activity
       activity={bore.activity}
