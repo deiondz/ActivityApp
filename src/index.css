@@ -259,7 +259,13 @@ button:hover {
 @media (max-width: 600px) {
   body {
     padding: 39px;
-    overflow: hidden;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
   }
   h1 {
     min-width: 20px;
@@ -300,7 +306,7 @@ button:hover {
     );
     filter: blur(200px);
   }
-  .box {
+  .box2 {
     position: absolute;
     z-index: -2;
     animation: rotate2 10s infinite;

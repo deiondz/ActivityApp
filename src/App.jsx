@@ -48,8 +48,10 @@ function App() {
 
   return (
     <div className="container">
-      <div className="box" id="box">
+      <div className="box2">
         <div id="blob2"></div>
+      </div>
+      <div className="box" id="box">
         <div id="blob"></div>
       </div>
       {isloading ? <Loading /> : renderUser}
